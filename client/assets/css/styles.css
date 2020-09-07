@@ -1,0 +1,42 @@
+body {
+    background-color: red;
+}
+
+#header {
+    text-align: center;
+}
+
+#chat-box {
+    height: 400px;
+    max-width: 500px;
+    min-width: 300px;
+    background-color: #f5f5f5;
+    margin: 0 auto;
+}
+
+label {
+    font-size: 10px;
+}
+
+#message-box,
+#handle-box {
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    font-size: 14px;
+}
+
+#message-box {
+    min-height: 100px;
+    font-size: 14px;
+}
+
+#user-actions {
+    margin: 0 auto;
+    max-width: 500px;
+    min-width: 300px;
+}
+
+#send-button {
+    display: block;
+}
