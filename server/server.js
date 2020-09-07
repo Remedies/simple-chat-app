@@ -34,4 +34,8 @@ socket.on('connection', (client) => {
     client.on('chat', (data) => {
         socket.emit('chat', data);
     });
+
+    client.on('typing', (data) => {
+        client.broadcast.emit('typing', data);
+    });
 });

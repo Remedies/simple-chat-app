@@ -17,6 +17,16 @@ button.addEventListener('click', (e) => {
     });
 });
 
+message.addEventListener('keypress', (e) => {
+    socket.emit('typing', {
+        handle: handle.value,
+    });
+});
+
 socket.on('chat', (data) => {
-    chat.innerHTML += `<p><strong>${data.handle}:<strong> ${data.message}`;
+    chat.innerHTML += `<p><strong>${data.handle}:<strong> ${data.message}</p>`;
+});
+
+socket.on('typing', (data) => {
+    chat.innerHTML = `<p>${data.handle} is typing...</p>`;
 });
