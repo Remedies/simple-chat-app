@@ -5,7 +5,7 @@ const hbs = require('hbs');
 
 const app = express();
 
-//constants
+//paths and constants
 const PORT = process.env.PORT || 5000;
 const staticPath = path.join(__dirname, './../client/assets/');
 const viewsPath = path.join(__dirname, './../client/views');
@@ -15,7 +15,7 @@ const partialsPath = path.join(__dirname, './../client/views/partials');
 app.use(express.static(staticPath));
 app.set('view engine', 'hbs');
 app.set('views', viewsPath);
-hbs.registerPartials('');
+hbs.registerPartials(partialsPath);
 
 //routes
 app.get('*', (req, res) => {
@@ -30,5 +30,8 @@ const socket = io(server);
 
 socket.on('connection', (client) => {
     console.log('Connection with user:', client.id);
-    client.emit('response');
+
+    client.on('chat', (data) => {
+        socket.emit('chat', data);
+    });
 });
