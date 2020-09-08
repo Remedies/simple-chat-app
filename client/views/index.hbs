@@ -12,26 +12,26 @@
 </head>
 
 <body>
-    <h1>
-        <div>
-            <h1 id="header">Simple chat application using Sockets.io</h1>
-        </div>
-        <div id="chat-box">
+    <div>
+        <h1 id="header">Simple chat application using Sockets.io</h1>
+    </div>
+    <div id="chat-box">
+        {{!-- <div id="chat-status">
 
-        </div>
-        <div id="user-actions">
-            <form action="submit">
-                <label for="handle">Handle:</label>
-                <input type="text" name="handle" id="handle-box">
-                <label for="message">Message:</label>
-                <textarea type="text" name="message" id="message-box" rows="10" cols="30"></textarea>
-                <button id="send-button">
-                    Send
-                </button>
-            </form>
-        </div>
+        </div> --}}
+    </div>
+    <div id="user-actions">
+        <form action="submit">
+            <label for="handle">Handle:</label>
+            <input type="text" name="handle" id="handle-box">
+            <label for="message">Message:</label>
+            <textarea type="text" name="message" id="message-box" rows="10" cols="30"></textarea>
+            <button id="send-button">
+                Send
+            </button>
+        </form>
+    </div>
 
-    </h1>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"
         integrity="sha512-v8ng/uGxkge3d1IJuEo6dJP8JViyvms0cly9pnbfRxT6/31c3dRWxIiwGnMSWwZjHKOuY3EVmijs7k1jz/9bLA=="
         crossorigin="anonymous"></script>
