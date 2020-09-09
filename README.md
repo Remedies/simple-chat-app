@@ -3,6 +3,7 @@
 ## Javascript/ES6 Express and Socket.io Chat application
 
 This is a practice application for me to learn the basics of socket.io. 
+Live site here: <coming soon>
 
 ### Requirements
 Running this application is simple and only requires a few components.
