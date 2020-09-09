@@ -37,11 +37,5 @@ socket.on('connection', (client) => {
 
     client.on('typing', (data) => {
         client.broadcast.emit('typing', data);
-        if (data.typing === true) {
-            console.log(`${data.handle} is typing.`);
-        }
-        if (data.typing === false) {
-            console.log(`${data.handle} stopped typing.`);
-        }
     });
 });

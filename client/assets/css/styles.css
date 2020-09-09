@@ -14,6 +14,12 @@ body {
     font-size: 18px;
 }
 
+#github-ribbon {
+    position: absolute;
+    left: 0;
+    z-index: 1000;
+}
+
 #chat-box {
     height: 400px;
     max-width: 500px;
@@ -50,7 +56,7 @@ form {
 }
 
 #message-box {
-    min-height: 100px;
+    min-height: 50px;
     font-size: 14px;
 }
 
@@ -79,6 +85,11 @@ form {
 }
 .chat-bubble > span {
     overflow-wrap: anywhere;
+}
+.chat-handle {
+    color: white;
+    font-weight: bold;
+    margin-right: 5px;
 }
 
 .bubble-self {

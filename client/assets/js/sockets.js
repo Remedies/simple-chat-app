@@ -5,7 +5,7 @@ const handle = document.getElementById('handle-box');
 const button = document.getElementById('send-button');
 const chat = document.getElementById('chat-box');
 
-//store temporary data
+//store temporary data.
 let socketData = {};
 
 socket.on('connect', () => {
@@ -37,17 +37,17 @@ message.addEventListener('keypress', (e) => {
             handle: handle.value,
             typing: false,
         });
-        console.log('stopped typing');
     }, 3000);
 });
 
 socket.on('chat', (data) => {
     const status = document.getElementById('chat-status');
     if (data.handle === handle.value) {
-        chat.innerHTML += `<div class="chat-bubble bubble-self"><span class='chat-handle'>${data.handle}:<span><span class='chat-message'>${data.message}</span></div>`;
+        chat.innerHTML += `<div class="chat-bubble bubble-self"><span class='chat-handle'>${data.handle}:</span><span class='chat-message'>${data.message}</span></div>`;
     } else {
-        chat.innerHTML += `<div class="chat-bubble"><span class='chat-handle'>${data.handle}:<span><span class='chat-message'>${data.message}</span></div>`;
+        chat.innerHTML += `<div class="chat-bubble"><span class='chat-handle'>${data.handle}:</span><span class='chat-message'>${data.message}</span></div>`;
     }
+    message.style.position = 'relative';
     status.style.bottom = '0px';
     status.style.position = 'absolute';
 });
