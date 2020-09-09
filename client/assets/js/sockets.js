@@ -6,6 +6,9 @@ const button = document.getElementById('send-button');
 const chat = document.getElementById('chat-box');
 const status = document.getElementById('chat-status');
 
+//store temporary data
+let socketData = {};
+
 socket.on('connect', () => {
     console.log('connected!');
 });
@@ -22,7 +25,15 @@ button.addEventListener('click', (e) => {
 message.addEventListener('keypress', (e) => {
     socket.emit('typing', {
         handle: handle.value,
+        typing: true,
     });
+    clearInterval(socketData[socket.id]);
+    socketData[socket.id] = setTimeout(function () {
+        socket.emit('typing', {
+            handle: handle.value,
+            typing: false,
+        });
+    }, 3000);
 });
 
 socket.on('chat', (data) => {
@@ -31,5 +42,9 @@ socket.on('chat', (data) => {
 });
 
 socket.on('typing', (data) => {
-    status.innerHTML = `${data.handle} is typing...<br>`;
+    if (data.typing === true) {
+        status.innerHTML = `${data.handle} is typing...<br>`;
+    } else {
+        status.innerHTML = '';
+    }
 });
