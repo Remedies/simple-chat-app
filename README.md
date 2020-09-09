@@ -31,3 +31,10 @@ npm start
 * **Chat in real-time** - This project uses socket.io which allows for real data to be transferred between clients and the express server.
 
 * **Know if other clients are typing** - Indicator that displays if a client is typing.
+
+
+### TODO
+1. Add front End color customization
+2. Add User Login and Authorization
+3. Add Chat logs in Database
+4. Add time stamps
