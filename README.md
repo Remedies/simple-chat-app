@@ -47,5 +47,5 @@ npm start
 2. Add User Login and Authorization
 3. Add Chat logs in Database
 4. Add time stamps
-5. Add ability to create rooms with optional passwords
+5. Add ability to create and join rooms with optional passwords
 6. Convert to React.js
