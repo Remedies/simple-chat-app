@@ -1,3 +1,4 @@
+
 # simple-chat-application
 ## Javascript/ES6 Express and Socket.io Chat application
 
@@ -6,10 +7,22 @@ This is a practice application for me to learn the basics of socket.io.
 ### Requirements
 Running this application is simple and only requires a few components.
 
-1. Make sure node.js(12+) is installed on your machine 
-2. Clone this repository
-3. Run "npm install" in the project directory
-4. Run "npm run server"
+1. Make sure node.js is installed on your machine 
+2. Modern Browser running.
+
+### How to Run
+1. Clone this repository
+```git
+git clone https://github.com/Remedies/simple-chat-app
+```
+2. Run "npm install" in project directory
+```git
+npm install
+```
+3. Run "npm run server" in project directory
+```git
+npm run server
+```
 5. Use multiple browsers to visit http://localhost:5000/ (to simulate multiple clients) and chat with yourself 
 
 ### Features
