@@ -42,14 +42,14 @@ message.addEventListener('keypress', (e) => {
 
 socket.on('chat', (data) => {
     const status = document.getElementById('chat-status');
+    console.log('anon' + data.anon);
     if (data.handle === handle.value || data.handle == 'anon' + data.anon) {
         chat.innerHTML += `<div class="chat-bubble bubble-self"><span class='chat-handle'>${data.handle}:</span><span class='chat-message'>${data.message}</span></div>`;
     } else {
         chat.innerHTML += `<div class="chat-bubble"><span class='chat-handle'>${data.handle}:</span><span class='chat-message'>${data.message}</span></div>`;
     }
-    message.style.position = 'relative';
-    status.style.bottom = '0px';
-    status.style.position = 'absolute';
+    let objDiv = document.getElementById('chat-box');
+    objDiv.scrollTop = objDiv.scrollHeight;
 });
 
 socket.on('typing', (data) => {
