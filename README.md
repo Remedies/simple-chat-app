@@ -23,7 +23,7 @@ npm install
 ```
 3. Run "npm run server" in project directory
 ```git
-npm run server
+npm start
 ```
 5. Use multiple browsers to visit http://localhost:5000/ (to simulate multiple clients) and chat with yourself 
 
