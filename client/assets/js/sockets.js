@@ -42,7 +42,7 @@ message.addEventListener('keypress', (e) => {
 
 socket.on('chat', (data) => {
     const status = document.getElementById('chat-status');
-    if (data.handle === handle.value) {
+    if (data.handle === handle.value || data.handle == 'anon' + data.anon) {
         chat.innerHTML += `<div class="chat-bubble bubble-self"><span class='chat-handle'>${data.handle}:</span><span class='chat-message'>${data.message}</span></div>`;
     } else {
         chat.innerHTML += `<div class="chat-bubble"><span class='chat-handle'>${data.handle}:</span><span class='chat-message'>${data.message}</span></div>`;

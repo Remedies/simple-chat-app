@@ -1,8 +1,7 @@
 const express = require('express');
-const io = require('socket.io');
 const path = require('path');
 const hbs = require('hbs');
-
+const sockets = require('./sockets.js');
 const app = express();
 
 //paths and constants
@@ -22,20 +21,10 @@ app.get('*', (req, res) => {
     res.render('index', { myVariable: 'test' });
 });
 
+//run server
 const server = app.listen(PORT, () => {
     console.log(`Listening on port: ${PORT}`);
 });
 
-const socket = io(server);
-
-socket.on('connection', (client) => {
-    console.log('Connection with user:', client.id);
-
-    client.on('chat', (data) => {
-        socket.emit('chat', data);
-    });
-
-    client.on('typing', (data) => {
-        client.broadcast.emit('typing', data);
-    });
-});
+//run sockets
+sockets.runSockets(server);
