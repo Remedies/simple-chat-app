@@ -37,14 +37,21 @@ message.addEventListener('keypress', (e) => {
 });
 
 socket.on('chat', (data) => {
-    chat.innerHTML += `<div class="chat-message"><span class='chat-handle'>${data.handle}:<span><span class='chat-message'>${data.message}</span><br></div>`;
-    status.innerHTML = ' ';
+    if (data.handle === handle.value) {
+        chat.innerHTML += `<div class="chat-bubble bubble-self"><span class='chat-handle'>${data.handle}:<span><span class='chat-message'>${data.message}</span></div>`;
+    } else {
+        chat.innerHTML += `<div class="chat-bubble"><span class='chat-handle'>${data.handle}:<span><span class='chat-message'>${data.message}</span></div>`;
+    }
 });
 
 socket.on('typing', (data) => {
+<<<<<<< HEAD
     if (data.typing === true) {
         status.innerHTML = `${data.handle} is typing...<br>`;
     } else {
         status.innerHTML = '';
     }
+=======
+    // chat.innerHTML = `${data.handle} is typing...<br>`;
+>>>>>>> style
 });

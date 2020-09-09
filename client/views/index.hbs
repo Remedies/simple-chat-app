@@ -4,33 +4,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
-        integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ=="
-        crossorigin="anonymous" />
     <title>Simple Chat app</title>
 </head>
 
 <body>
-    <div>
-        <h1 id="header">Simple chat application using Sockets.io</h1>
-    </div>
-    <div id="chat-box">
-        <div id="chat-status">
+
+    <div class="container">
+        <div>
+            <h1 id="header">Simple chat application using Sockets.io</h1>
+        </div>
+        <div class="row">
+            <div id="chat-box" class="col-md-8">
+                <div id="chat-status">
+
+                </div>
+            </div>
+            <div id="user-actions" class="col-md-6">
+                <form action="submit">
+                    <label for="handle">Handle:</label>
+                    <input type="text" name="handle" id="handle-box">
+                    <label for="message">Message:</label>
+                    <textarea type="text" name="message" id="message-box" rows="10" cols="30"></textarea>
+                    <button id="send-button">
+                        Send
+                    </button>
+                </form>
+            </div>
 
         </div>
     </div>
-    <div id="user-actions">
-        <form action="submit">
-            <label for="handle">Handle:</label>
-            <input type="text" name="handle" id="handle-box">
-            <label for="message">Message:</label>
-            <textarea type="text" name="message" id="message-box" rows="10" cols="30"></textarea>
-            <button id="send-button">
-                Send
-            </button>
-        </form>
-    </div>
+
+
+
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"
         integrity="sha512-v8ng/uGxkge3d1IJuEo6dJP8JViyvms0cly9pnbfRxT6/31c3dRWxIiwGnMSWwZjHKOuY3EVmijs7k1jz/9bLA=="
