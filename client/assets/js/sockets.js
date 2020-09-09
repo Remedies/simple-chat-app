@@ -45,13 +45,9 @@ socket.on('chat', (data) => {
 });
 
 socket.on('typing', (data) => {
-<<<<<<< HEAD
     if (data.typing === true) {
         status.innerHTML = `${data.handle} is typing...<br>`;
     } else {
         status.innerHTML = '';
     }
-=======
-    // chat.innerHTML = `${data.handle} is typing...<br>`;
->>>>>>> style
 });
