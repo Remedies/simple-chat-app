@@ -59,7 +59,7 @@ Layout
     min-width: 200px;
     background-color: #fcfcfc;
     margin: 0 auto;
-    overflow-y: auto;
+    overflow-y: scroll;
     border-radius: 20px 20px 0 0;
 }
 
@@ -127,7 +127,6 @@ label {
     padding: 10px;
     border-radius: 10px;
     min-height: 30px;
-    overflow-y: auto;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.19);
     background-image: linear-gradient(to bottom right, #d5f5f7, #be7aeb);
     display: block;
