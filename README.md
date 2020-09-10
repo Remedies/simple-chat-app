@@ -49,5 +49,5 @@ npm start
 4. Add time stamps
 5. Add ability to create and join rooms with optional passwords
 6. Convert to React.js
-7. Run Babel for cross browser compatability
+7. ~~Run Babel for cross browser compatability~~
 8. Improve CSS convention / Add SASS
