@@ -32,7 +32,7 @@ form {
 Typography 
 =======================
 */
-#header {
+h1 {
     text-align: center;
     font-size: 18px;
 }
@@ -44,16 +44,16 @@ Layout
 */
 
 .container {
-    padding: 50px;
+    padding: 20px;
 }
 
 #chat-box-container {
-    height: 400px;
+    height: 300px;
     margin: 0 auto;
 }
 
 #chat-box {
-    height: 400px;
+    height: 300px;
     max-width: 500px;
     min-width: 200px;
     background-color: #fcfcfc;
@@ -80,8 +80,11 @@ Layout
     width: 100%;
     min-width: 200px;
     max-width: 500px;
-    height: 30px;
+    height: 40px;
     margin: 0 auto;
+    border-radius: 0 0 20px 20px;
+    padding: 10px;
+    z-index: -1000;
 }
 
 #message-box,
@@ -92,13 +95,18 @@ Layout
     font-size: 14px;
     border-radius: 5px;
 }
+
+#header-section h1 {
+    padding-top: 30px;
+}
 /* 
 =======================
 Components
 =======================
 */
 
-#github-ribbon {
+/*#github-ribbon*/
+a img {
     position: absolute;
     left: 0;
     z-index: 1000;
@@ -122,7 +130,7 @@ label {
     border-radius: 10px;
     min-height: 30px;
     overflow-y: auto;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.19);
     background-image: linear-gradient(to bottom right, #d5f5f7, #be7aeb);
     display: block;
     white-space: pre-wrap;
