@@ -27,6 +27,8 @@ form {
     margin: 0;
 }
 
+header {
+}
 /* 
 =======================
 Typography 
@@ -35,6 +37,7 @@ Typography
 h1 {
     text-align: center;
     font-size: 18px;
+    padding-top: 30px;
 }
 
 /* 
@@ -96,9 +99,6 @@ Layout
     border-radius: 5px;
 }
 
-#header-section h1 {
-    padding-top: 30px;
-}
 /* 
 =======================
 Components

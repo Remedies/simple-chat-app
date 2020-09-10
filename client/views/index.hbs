@@ -13,12 +13,12 @@
 </head>
 
 <body>
-    <section id="header-section">
+    <header>
         <a href="https://github.com/Remedies/simple-chat-app"><img loading="lazy" width="149" height="149"
                 src="https://github.blog/wp-content/uploads/2008/12/forkme_left_red_aa0000.png?resize=149%2C149"
                 class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
-        <h1>Simple chat application using Sockets.io</h1>
-    </section>
+        <h1>Chat app using Sockets.io</h1>
+    </header>
 
     <section class="container">
         <div class="row">
@@ -29,39 +29,23 @@
                 </div>
             </div>
 
-            <div id="user-actions" class="col-md-6">
-                <form action="submit">
-                    <label for="handle">Handle:</label>
-                    <input type="text" name="handle" id="handle-box">
-                    <label for="message">Message:</label>
-                    <textarea type="text" name="message" id="message-box" rows="3" cols="30"></textarea>
-                    <button id="send-button">
-                        Send
-                    </button>
-                </form>
-            </div> <!-- user actions -->
+            <form action="submit" id="user-actions" class="col-md-6">
+                <label for="handle">Handle:</label>
+                <input type="text" name="handle" id="handle-box">
+                <label for="message">Message:</label>
+                <textarea type="text" name="message" id="message-box" rows="3" cols="30"></textarea>
+                <button id="send-button">
+                    Send
+                </button>
+            </form>
+
         </div> <!-- row -->
     </section> <!-- container -->
-
-
-
-    <!-- JS, Popper.js, and jQuery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-        crossorigin="anonymous"></script>
-
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"
         integrity="sha512-v8ng/uGxkge3d1IJuEo6dJP8JViyvms0cly9pnbfRxT6/31c3dRWxIiwGnMSWwZjHKOuY3EVmijs7k1jz/9bLA=="
         crossorigin="anonymous"></script>
     <script src="./js/sockets.js"></script>
-
 </body>
 
 </html>
