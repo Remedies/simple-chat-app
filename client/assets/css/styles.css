@@ -1,3 +1,17 @@
+/*
+    Table Of Contents:
+    1. Global Styles 
+    2. Typography
+    3. Layout
+    4. Components
+*/
+
+/* 
+=======================
+Global Styles 
+=======================
+*/
+
 html {
     height: 100%;
 }
@@ -7,25 +21,37 @@ body {
     height: 100%;
 }
 
-.container {
-    padding: 50px;
+form {
+    width: 100%;
+    padding: 0;
+    margin: 0;
 }
 
+/* 
+=======================
+Typography 
+=======================
+*/
 #header {
     text-align: center;
     font-size: 18px;
 }
 
-#github-ribbon {
-    position: absolute;
-    left: 0;
-    z-index: 1000;
+/* 
+=======================
+Layout
+=======================
+*/
+
+.container {
+    padding: 50px;
 }
 
 #chat-box-container {
     height: 400px;
     margin: 0 auto;
 }
+
 #chat-box {
     height: 400px;
     max-width: 500px;
@@ -34,34 +60,6 @@ body {
     margin: 0 auto;
     overflow-y: auto;
     border-radius: 20px 20px 0 0;
-}
-#chat-status {
-    background-color: #fcfcfc;
-    color: gray;
-    width: 100%;
-    min-width: 200px;
-    max-width: 500px;
-    height: 30px;
-    margin: 0 auto;
-}
-
-label {
-    font-size: 10px;
-}
-
-form {
-    width: 100%;
-    padding: 0;
-    margin: 0;
-}
-
-#message-box,
-#handle-box {
-    width: 100%;
-    margin: 0 auto;
-    display: block;
-    font-size: 14px;
-    border-radius: 5px;
 }
 
 #message-box {
@@ -76,10 +74,42 @@ form {
     padding-top: 50px;
 }
 
+#chat-status {
+    background-color: #fcfcfc;
+    color: gray;
+    width: 100%;
+    min-width: 200px;
+    max-width: 500px;
+    height: 30px;
+    margin: 0 auto;
+}
+
+#message-box,
+#handle-box {
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    font-size: 14px;
+    border-radius: 5px;
+}
+/* 
+=======================
+Components
+=======================
+*/
+
+#github-ribbon {
+    position: absolute;
+    left: 0;
+    z-index: 1000;
+}
+
 label {
+    font-size: 10px;
     display: block;
     width: 50px;
 }
+
 #send-button {
     display: block;
     width: 70px;
@@ -97,16 +127,18 @@ label {
     display: block;
     white-space: pre-wrap;
 }
+
 .chat-bubble > span {
     overflow-wrap: anywhere;
 }
+
 .chat-handle {
     color: white;
     font-weight: bold;
     margin-right: 5px;
 }
 
-.bubble-self {
+.chat-bubble-self {
     background-color: #d9f9fa;
     background-image: linear-gradient(
         to bottom right,
