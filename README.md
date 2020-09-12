@@ -44,10 +44,11 @@ npm start
 ### TODO
 
 1. Add front End color customization
-2. Add User Login and Authorization
-3. Add Chat logs in Database
-4. Add time stamps
-5. Add ability to create and join rooms with optional passwords
-6. Convert to React.js
-7. ~~Run Babel for cross browser compatability~~
-8. Improve CSS convention / Add SASS
+2. UI overhaul
+3. Add User Login and Authorization
+4. Add Chat logs in Database
+5. Add time stamps
+6. Add ability to create and join rooms with optional passwords
+7. Convert to React.js
+8. ~~Run Babel for cross browser compatability~~
+9. ~~Improve CSS convention / Add SASS~~

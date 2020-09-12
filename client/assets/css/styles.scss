@@ -12,11 +12,7 @@
 Constants
 =======================
 */
-/* Colors */
-
-$darkwhite: #f5f5f5;
-$eggshell: #fcfcfc;
-
+@use 'colors';
 /* 
 =======================
 Global Styles 
@@ -28,7 +24,7 @@ html {
 }
 
 body {
-    background-color: $darkwhite;
+    background-color: colors.$darkwhite;
     height: 100%;
 }
 
@@ -68,7 +64,7 @@ Layout
     height: 300px;
     max-width: 500px;
     min-width: 200px;
-    background-color: $eggshell;
+    background-color: colors.$eggshell;
     margin: 0 auto;
     overflow-y: auto;
     border-radius: 20px 20px 0 0;
@@ -87,7 +83,7 @@ Layout
 }
 
 #chat-status {
-    background-color: $eggshell;
+    background-color: colors.$eggshell;
     color: gray;
     width: 100%;
     min-width: 200px;
@@ -135,7 +131,7 @@ label {
 }
 
 .chat-bubble {
-    background-color: $eggshell;
+    background-color: colors.$eggshell;
     margin: 10px;
     padding: 10px;
     border-radius: 10px;
@@ -160,10 +156,10 @@ label {
 }
 
 .chat-bubble-self {
-    background-color: $eggshell;
+    background-color: colors.$eggshell;
     background-image: linear-gradient(
         to bottom right,
-        #e85a77,
-        #be7aeb
+        colors.$red,
+        colors.$pink
     ) !important;
 }
