@@ -11,9 +11,10 @@
 Global Styles 
 =======================
 */
+$height: 100%;
 
 html {
-    height: 100%;
+    height: $height;
 }
 
 body {

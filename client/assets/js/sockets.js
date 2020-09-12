@@ -1,3 +1,4 @@
+require('./../css/styles.scss');
 var socket = io.connect();
 
 const message = document.getElementById('message-box');
